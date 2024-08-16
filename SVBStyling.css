@@ -10,7 +10,6 @@ header {
     /*background-color: #474747;*/
     color: #fff;
     text-align: center;
-    position: sticky;
 }
 
 #desktopNav, #mobileNav>#mobileHeaderBody{
