@@ -10,6 +10,8 @@ header {
     /*background-color: #474747;*/
     color: #fff;
     text-align: center;
+    top: 0px;
+    position: -webkit-sticky;
     position: sticky;
 }
 
@@ -118,10 +120,8 @@ main {
     margin: 0; 
 }
 
-.deskContent{
-    top: 10px;
-    position: -webkit-sticky;
-    position: sticky;
+#facebook{
+    position: fixed;
 }
 
 section#upcoming{
