@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Club Name - about</title>
+    <link rel="stylesheet" type="text/css" href="SVBStyling.css">
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <header id="header">
+        <nav id="desktopNav" class="deskContent">
+            <div>
+                <div class="grid">
+                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
+                    <h1>Blautaler Schuhplattler of Kansas City</h1>
+                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
+                </div>
+                <h3>Est. 1952</h3>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="member.html">Become a Member</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>      
+            </div>  
+        </nav>
+        <nav id="mobileNav" class="phoneContent">
+            <div id="mobileHeaderBody">
+                <h1>Blautaler Schuhplattler of </h1>
+                <div class="grid">
+                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
+                    <h1>Kansas City</h1>
+                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
+                </div>
+                <h3>Est. 1952</h3>
+                
+                <div>
+                    <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                    <div class="hamburgerContainer" onclick="toggleHamburger(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="links" class="closed">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="member.html">Become a Member</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <script>            
+            function toggleHamburger(target){
+                target.classList.toggle("change");
+                var x = document.getElementById("links");
+                if (x.className === "closed") {
+                    x.className = "open";
+                } else {
+                    x.className = "closed";
+                }
+            }
+        </script>
+        <h1>Gallery</h1>
+    </main>
+
+    <footer id="footer">
+        <p>Copyright &copy; SV Blautaler 2024</p>
+    </footer>
+</body>
+</html>
