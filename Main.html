@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Club Name</title>
+    <link rel="stylesheet" type="text/css" href="SVBStyling.css">
+</head>
+<body onload="loadFacebook()" onresize="loadFacebook()">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <header id="header">
+        <nav id="desktopNav" class="deskContent">
+            <div>
+                <div class="grid">
+                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
+                    <h1>Blautaler Schuhplattler of Kansas City</h1>
+                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
+                </div>
+                <h3>Est. 1952</h3>
+                <div>
+                    <ul>
+                        <li><a href="#events">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Become a Member</a></li>
+                        <li><a href="#contact">Calendar</a></li>
+                        <li><a href="#contact">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>      
+            </div>  
+        </nav>
+        <nav id="mobileNav" class="phoneContent">
+            <div id="mobileHeaderBody">
+                <h1>Blautaler Schuhplattler of </h1>
+                <div class="grid">
+                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
+                    <h1>Kansas City</h1>
+                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
+                </div>
+                <h3>Est. 1952</h3>
+                
+                <div>
+                    <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                    <div class="hamburgerContainer" onclick="toggleHamburger(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="links" class="closed">
+                <ul>
+                    <li><a href="#events">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#events">Become a Member</a></li>
+                    <li><a href="#contact">Calendar</a></li>
+                    <li><a href="#contact">Gallery</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <script>
+            function loadFacebook(){
+                var fb = document.getElementById("facebook");
+                var fbContainer = document.getElementById("fbDiv");
+                var src = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsvblautaler&width=" + fbContainer.clientWidth + "&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=" + 900;
+
+                var offset = document.getElementById("header").offsetHeight + document.getElementById("footer").offsetHeight + 250;
+                
+                fb.setAttribute("src", src);
+                fb.setAttribute("height", screen.height - offset);
+                fb.setAttribute("width", fbContainer.clientWidth - 20);
+            }
+            
+            function toggleHamburger(target){
+                target.classList.toggle("change");
+                var x = document.getElementById("links");
+                if (x.className === "closed") {
+                    x.className = "open";
+                } else {
+                    x.className = "closed";
+                }
+            }
+        </script>
+        
+        <div class="column deskContent" id="fbDiv">
+            <iframe id="facebook" scrolling="yes" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+        <div class="column">
+            <section id="about">
+                <h2>About Us</h2>
+                <img src="about_us_image.jpg" alt="About Us Image">
+                <p>Write a brief description of your club here.</p>
+            </section>
+
+            <section id="events">
+                <h2>Events</h2>
+                <img src="events_image.jpg" alt="Events Image">
+                <p>List upcoming events or past events with details.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <img src="contact_image.jpg" alt="Contact Image">
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+                <p>Provide contact information: email, phone number, address.</p>
+            </section>
+        </div>
+        <div class="column deskContent">
+            <section id="upcoming">
+                <h1>Upcoming Events</h1>
+                
+                <section>
+                    <h3>
+                    Football Night
+                    </h3>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Copyright &copy; SV Blautaler 2024</p>
+    </footer>
+</body>
+</html>
