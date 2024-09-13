@@ -67,13 +67,15 @@
             function reload(){
                 var element = document.getElementById("upcoming");
                 var col = document.getElementById("mainColumn");
+                
+                col.classList.remove("column");
+                col.classList.remove("NotAColumn");
+                
                 if(!element.checkVisibility()){
-                    col.classList.remove("column");
                     col.classList.add("NotAColumn");
                 }
                 else{
                     col.classList.add("column");
-                    col.classList.remove("NotAColumn");
                 }
                 loadFacebook();
             }
