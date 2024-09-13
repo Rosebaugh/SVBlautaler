@@ -5,7 +5,7 @@ nav a {
 
 .column{
     float: left;
-    width: .deskContent. 33%;
+    width: 33%;
     height: 100%;
     padding-top: 20px;
     padding-left: 20px;
@@ -16,13 +16,12 @@ nav a {
     margin: 0; 
 }
 
-section#upcoming{
-    border-style: solid;
+section#calendar{
     padding-bottom: 15px;
     padding-left: 15px;
 }
 
-section#upcoming>h1{
+section#calendar>h1{
     font-size: 35px;
     text-decoration: underline;
 }
@@ -31,20 +30,13 @@ section#upcoming>h1{
 
 section {
     margin-bottom: 0px;
+    margin-top: 10px;
+    padding-right: 10em;
 }
 
 section h1 {
     color: #333;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0px;
-    border: 0px;
-    display: block;
-}
-section h2 {
-    color: #333;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 0px;
@@ -52,26 +44,19 @@ section h2 {
     display: block;
 }
 section h3 {
+    font-size: 20px;
     color: #333;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     margin: 0px;
     border: 0px;
     display: block;
 }
 section h4 {
     color: #333;
-    padding-left: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin: 0px;
-    border: 0px;
-    display: block;
-}
-section p {
-    color: #333;
-    padding-top: 0px;
+    padding-left: 40px;
+    padding-top: 10px;
     padding-bottom: 0px;
     margin: 0px;
     border: 0px;
@@ -84,9 +69,6 @@ section small {
     border: 0px;
     display: inline;
 }
-
 section img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+  border-radius: 50px;
 }

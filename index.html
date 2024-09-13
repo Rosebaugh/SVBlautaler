@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Club Name</title>
+    <title>SV Blautaler</title>
     <link rel="stylesheet" type="text/css" href="SVBStyling.css">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body onload="loadFacebook()" onresize="loadFacebook()">
+<body onload="reload()" onresize="reload()">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <header id="header">
         <nav id="desktopNav" class="deskContent">
@@ -64,6 +64,19 @@
 
     <main>
         <script>
+            function reload(){
+                var element = document.getElementById("upcoming");
+                var col = document.getElementById("mainColumn");
+                if(!element.checkVisibility()){
+                    col.classList.remove("column");
+                    col.classList.add("NotAColumn");
+                }
+                else{
+                    col.classList.add("column");
+                    col.classList.remove("NotAColumn");
+                }
+                loadFacebook();
+            }
             function loadFacebook(){
                 var fb = document.getElementById("facebook");
                 var fbContainer = document.getElementById("fbDiv");
@@ -90,7 +103,7 @@
         <div class="column deskContent" id="fbDiv">
             <iframe id="facebook" scrolling="yes" allowtransparency="true" frameborder="0"></iframe>
         </div>
-        <div class="column">
+        <div id="mainColumn">
             <section id="about">
                 <h1>Kansas City's German Dancing Group</h1>
                 <h4>
