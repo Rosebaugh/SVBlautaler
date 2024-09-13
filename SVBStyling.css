@@ -13,7 +13,8 @@ header {
 }
 
 #desktopNav, #mobileNav>#mobileHeaderBody{
-    background-image: linear-gradient(to bottom, black, #474747, #fa5252, #fff159, white);
+    background-color: #30b2e6;
+    /*background-image: linear-gradient(to bottom, black, #474747, #fa5252, #fff159, white);*/
 }
 
 #desktopNav .grid{
@@ -24,16 +25,16 @@ header {
 }
 
 #desktopNav h1{
-    font-size: 50px;
+    font-size: 46px;
     text-shadow: 2px 2px 2px black;
     margin: 0;
-    color: #30b2e6;
+    color: white;
 }
 
 #desktopNav h3{
     text-shadow: .5px .5px .5px black;
     margin: 0;
-    color: #30b2e6;
+    color: white;
 }
 
 #desktopNav ul {
@@ -45,7 +46,7 @@ header {
 }
 
 #desktopNav ul>li>a:hover{
-    color: #68a2e3;
+    color: white;
 }
 
 #desktopNav li {
@@ -59,7 +60,7 @@ header {
     font-size: 40px;
     text-shadow: 2px 2px black;
     margin: 0;
-    color: #30b2e6;
+    color: white;
     display:inline; 
 }
 
@@ -68,8 +69,9 @@ header {
     display:inline;
     text-shadow: 2px 2px black;
     top: 0;
-    color: #30b2e6;
+    color: white;
     padding-top: 10px;
+    
 }
 
 #mobileNav ul {
@@ -104,48 +106,10 @@ main {
     clear: both;
 }
 
-.column{
-    float: left;
-    width: 33%;
-    height: 100%;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    flex-grow: 1; 
-    border: none; 
-    margin: 0; 
-}
-
 .deskContent{
     top: 10px;
     position: -webkit-sticky;
     position: sticky;
-}
-
-section#upcoming{
-    border-style: solid;
-}
-
-section#upcoming>h1{
-    font-size: 30px;
-}
-
-
-
-section {
-    margin-bottom: 30px;
-}
-
-section h2 {
-    color: #333;
-    /*margin-top: 0;*/
-}
-
-section img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
 }
 
 footer {
@@ -199,12 +163,14 @@ footer p{
     }
     #links.open ul {
         position: absolute;
+        border-top-style:solid;
+        border-top-color:black;
         left: 0;
         right: 0;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background-image: linear-gradient(to bottom, white, #1fc6f0);
+        background-image: linear-gradient(to bottom, #30b2e6, #1fc6f0);
     }
     #links.open a {
         
