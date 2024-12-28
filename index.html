@@ -5,100 +5,21 @@
     <link rel="stylesheet" type="text/css" href="SVBStyling.css">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body onload="reload()" onresize="reload()">
+<body onload="load()" onresize="reload()">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <header id="header">
-        <nav id="desktopNav" class="deskContent">
-            <div>
-                <div class="grid">
-                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
-                    <h1>SV Blautaler Schuhplattler of Kansas City</h1>
-                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
-                </div>
-                <h3>Est. 1952</h3>
-                <div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="member.html">Become a Member</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>      
-            </div>  
-        </nav>
-        <nav id="mobileNav" class="phoneContent">
-            <div id="mobileHeaderBody">
-                <h1>Blautaler Schuhplattler of </h1>
-                <div class="grid">
-                    <img src="us-flag.png" alt="US Flag" style="height: 30px; justify-self: right;">
-                    <h1>Kansas City</h1>
-                    <img src="german-flag.png" alt="German Flag" style="height: 30px;">
-                </div>
-                <h3>Est. 1952</h3>
-                
-                <div>
-                    <a href="javascript:void(0);" class="icon">
-                    <div class="hamburgerContainer" onclick="toggleHamburger(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                    </a>
-                </div>
-            </div>
-
-            <div id="links" class="closed">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="member.html">Become a Member</a></li>
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
+        <nav id="desktopNav" class="deskContent"></nav>
+        <nav id="mobileNav" class="phoneContent"></nav>
     </header>
-
     <main>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+        <script src="Navbar.js"></script>
+        <script src="index.js"></script>
         <script>
-            function reload(){
-                var element = document.getElementById("upcoming");
-                var col = document.getElementById("mainColumn");
-                
-                col.classList.remove("column");
-                col.classList.remove("NotAColumn");
-                
-                if(!element.checkVisibility()){
-                    col.classList.add("NotAColumn");
-                }
-                else{
-                    col.classList.add("column");
-                }
-                loadFacebook();
-            }
-            function loadFacebook(){
-                var fb = document.getElementById("facebook");
-                var fbContainer = document.getElementById("fbDiv");
-                var src = "https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsvblautaler&width=" + fbContainer.clientWidth + "&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=" + 900;
-
-                var offset = document.getElementById("header").offsetHeight + document.getElementById("footer").offsetHeight + 250;
-                
-                fb.setAttribute("src", src);
-                fb.setAttribute("height", screen.height - offset);
-                fb.setAttribute("width", fbContainer.clientWidth - 20);
-            }
-            
-            function toggleHamburger(target){
-                target.classList.toggle("change");
-                var x = document.getElementById("links");
-                if (x.className === "closed") {
-                    x.className = "open";
-                } else {
-                    x.className = "closed";
-                }
+            function load(){
+                loadNavbar();
+                $("#upcoming").load("upcomingEvents.html");
+                reload();
             }
         </script>
         
@@ -128,81 +49,6 @@
         </div>
         <div class="column deskContent">
             <section id="upcoming">
-                <h1>Upcoming Events</h1>
-                <section>
-                    <span>
-                        <h2>
-                            Abilene Oktoberfest <small>9/20 - 9/21</small>
-                        </h2>
-                        <h4>
-                            Perfomance on 21th at
-                        </h4>
-                        <h4>
-                            2:00PM, 4:00PM, 5:00PM (Keg Tapping + Whip)
-                        </h4>
-                        <h4>
-                            6:00PM, 7:30PM
-                        </h4>
-                        <h4>
-                            <a href="https://www.abileneoktoberfest.com/" target="_blank">
-                                abileneoktoberfest.com
-                            </a>
-                        </h4>
-                    </span>
-                </section>
-                <section>
-                    <span>
-                        <h2>
-                            Fort Leavenworth Oktoberfest <small>9/27</small>
-                        </h2>
-                        <h4>
-                            Perfomance on 27th at
-                        </h4>
-                    </span>
-                </section>
-                <section>
-                    <span>
-                        <h2>
-                            Lee Summit Oktoberfest <small>9/28</small>
-                        </h2>
-                        <h4>
-                            Perfomance on 28th at
-                        </h4>
-                        <h4>
-                            Downtown Lee's Summit by Main and 3rd
-                        </h4>
-                        <h4>
-                            <a href="https://www.lsoktoberfest.com/" target="_blank">
-                                lsoktoberfest.com
-                            </a>
-                        </h4>
-                    </span>
-                </section>
-                <section>
-                    <span>
-                        <h2>
-                            KC Oktoberfest <small>10/4 - 10/5</small>
-                        </h2>
-                        <h4>
-                            Crown Center in KCMO
-                        </h4>
-                        <h4>
-                            <a href="https://kcoktoberfest.com/" target="_blank">
-                                kcoktoberfest.com
-                            </a>
-                        </h4>
-                    </span>
-                </section>
-                <section>
-                    <span>
-                        <h2>
-                            Learn German Dance <small>10/13  @ 1pm</small>
-                        </h2>
-                        <h4>
-                            Immanuel Lutheran Church
-                        </h4>
-                    </span>
-                </section>
             </section>
         </div>
     </main>
