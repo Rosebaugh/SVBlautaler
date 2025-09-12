@@ -20,8 +20,16 @@
                 loadNavbar();
             }
         </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                document.getElementById("iframeCalendar").contents().find('.Sp1EOc').hide();
+            });
+        </script>
         <section id="calendar">
             <h1>Calendar</h1>
+            <div id="googleCalendar" >
+                <iframe id="iframeCalendar" src="https://calendar.google.com/calendar/embed?src=a8050487c3d4d7990dbb9d6ae6259179fde63f31987b7305a30bf1bdfeb009cb%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" frameborder="0" scrolling="no"></iframe>
+            </div>
         </section>
     </main>
 

@@ -19,6 +19,7 @@ nav a {
 section#calendar{
     padding-bottom: 15px;
     padding-left: 15px;
+    padding-right: 15px;
 }
 
 section#calendar>h1{
@@ -27,11 +28,46 @@ section#calendar>h1{
 }
 
 
+#googleCalendar{
+    display:block;
+    text-align: center;
+    width:100%;
+    min-height: 70vh;
+}
+
+@media screen and (min-width: 600px) {
+    #googleCalendar{
+        min-height: 70vh;
+    }
+    
+    #googleCalendar>iframe{
+        width:80%;
+        min-width: 300px;
+        height:65vh;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #googleCalendar{
+        min-height: 60vh;
+    }
+    #googleCalendar>iframe{
+        width:100%;
+        height:60%;
+        min-height: 300px;
+    }
+}
+
+.Sp1EOc{
+    display: "none"
+}
+
+
 
 section {
     margin-bottom: 0px;
     margin-top: 10px;
-    padding-right: 10em;
 }
 
 section h1 {
