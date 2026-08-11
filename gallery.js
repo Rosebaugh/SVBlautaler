@@ -16,6 +16,7 @@ function loadImages(json){
     var container = document.getElementById('images');
     var thumbnail = "https://drive.google.com/thumbnail?id="
     var source = "https://drive.google.com/file/d/"
+    var curDiv = null;
     
     rows.forEach(row => {
         if(row?.c?.length < 2){
@@ -25,6 +26,14 @@ function loadImages(json){
         var image = row.c[1].v;
         
         if(image == null){
+            if(curDiv != null){
+                container.appendChild(curDiv);
+            }
+            curDiv = document.createElement("div");
+            curDiv.classList.add("gallerySection")
+            var header = document.createElement("h3");
+            header.textContent = row.c[0]?.v ?? "";
+            curDiv.appendChild(header);
             return;
         }
         
@@ -39,6 +48,9 @@ function loadImages(json){
         newImage.appendChild(pic);
         newImage.appendChild(caption);
         
-        container.appendChild(newImage);
-    })
+        curDiv.appendChild(newImage);
+    });
+    if(curDiv != null){
+        container.appendChild(curDiv);
+    }
 }
