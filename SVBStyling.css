@@ -128,11 +128,13 @@ footer p{
 @media screen and (min-width: 600px) {
     .deskContent {display:block; }
     .phoneContent {display:none; visibility: hidden;}
+    .column {width:33%;}
 }
 
 @media screen and (max-width: 600px) {
     .deskContent {display:none; visibility: hidden;}
     .phoneContent {display:block; }
+    .column {width:auto;}
 }
 
 /*nav bar*/
